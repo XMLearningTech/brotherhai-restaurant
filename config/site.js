@@ -1,16 +1,16 @@
 export const siteConfig = {
-  name: "Crazy Cattle 3D",
-  description: "Play Crazy Cattle 3D unblocked online for free. Control crazy cattle in this 3D action game. No download required, start playing instantly in your browser!",
-  domain: "crazy-cattle.net",
-  url: "https://crazy-cattle.net",
-  email: "support@crazy-cattle.net",
-  author: "Crazy Cattle 3D",
+  name: "Raise Animals",
+  description: "Play Raise Animals online free! Catch and raise animals, build your dream farm with unique mutations and offline progress. Roblox simulation game - no download required!",
+  domain: "raiseanimals.org",
+  url: "https://raiseanimals.org",
+  email: "support@raiseanimals.org",
+  author: "Raise Animals",
   social: {
-    twitter: "CrazyCattle",
-    facebook: "CrazyCattle",
+    twitter: "RaiseAnimalsGame",
+    facebook: "RaiseAnimalsGame",
   },
   metadata: {
-    keywords: ["crazy cattle", "3d game", "online game", "free game"],
+    keywords: ["raise animals", "farm game", "roblox game", "animal simulation", "online game", "free game", "catch animals", "farm building"],
     themeColor: "#ffffff",
     manifestPath: "/assets/img/site.webmanifest",
   },
@@ -22,6 +22,6 @@ export const siteConfig = {
       apple: "/assets/img/apple-touch-icon.png",
       // safari: "/assets/img/safari-pinned-tab.svg",
     },
-    og: "/assets/img/crazy-cattle-3d-og-image.png",
+    og: "/assets/raise-animals/raise-animals.png",
   },
 };

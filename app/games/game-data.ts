@@ -7,12 +7,19 @@ export interface Game {
 }
 
 export const games: Record<string, Game> = {
+  "raise-animals": {
+    id: "raise-animals",
+    title: "Raise Animals",
+    description: "Catch and raise animals in this captivating Roblox farm simulation! Build your dream farm with unique mutations and offline progress.",
+    image: "/assets/raise-animals/raise-animals.png",
+    url: "/raise-animals",
+  },
   "crazy-cattle-3d": {
     id: "crazy-cattle-3d",
     title: "Crazy Cattle 3D",
     description: "The original free online 3D action game with explosive physics-based gameplay. Control crazy cattle and battle it out!",
     image: "/assets/crazycattle3d-howto.jpg",
-    url: "/",
+    url: "/crazy-cattle-3d",
   },
   "crazy-cow-3d": {
     id: "crazy-cow-3d",
@@ -83,6 +90,41 @@ export const games: Record<string, Game> = {
     description: "Play Drift Boss unblocked online for free! Test your timing and precision in this fun 3D drifting game. ",
     image: "https://doodle-baseball.net/assets/drift-boss/drift-boss.webp",
     url: "https://doodle-baseball.net/drift-boss",
+  },
+  "wrangle-ranch": {
+    id: "wrangle-ranch",
+    title: "Wrangle Ranch",
+    description: "Experience the wild west in Wrangle Ranch! Manage your ranch, wrangle cattle, and build your western empire in this engaging strategy game.",
+    image: "/assets/wrangle-ranch/wrangle-ranch.png",
+    url: "/wrangle-ranch",
+  },
+  "steal-brainrot-online": {
+    id: "steal-brainrot-online",
+    title: "Steal Brainrot Online",
+    description: "Experience the ultimate stealth and strategy adventure! Master the art of stealth gameplay in this engaging online game with strategic missions and brain-teasing challenges.",
+    image: "/assets/steal-brainrot-online/steal-brainrot-online.png",
+    url: "/steal-brainrot-online",
+  },
+  "drift-king-ntl": {
+    id: "drift-king-ntl",
+    title: "Drift King NTL",
+    description: "Master the art of drifting in this exciting racing game! Experience realistic drift physics and become the ultimate drift champion with precision control.",
+    image: "/assets/drift-king-ntl/drift-king-ntl.png",
+    url: "/drift-king-ntl",
+  },
+  "shell-shockers": {
+    id: "shell-shockers",
+    title: "Shell Shockers",
+    description: "Join epic egg battles in this hilarious multiplayer FPS game! Control armed eggs in fast-paced combat with various weapons and game modes.",
+    image: "/assets/shell-shockers/shell-shockers.png",
+    url: "/shell-shockers",
+  },
+  "curve-rush": {
+    id: "curve-rush",
+    title: "Curve Rush",
+    description: "Speed down and launch into the sky! Master the slopes, land smoothly, and go for insane air tricks in this addicting sand-riding game.",
+    image: "/assets/curve-rush/curve-rush.png",
+    url: "/curve-rush",
   }
 };
 

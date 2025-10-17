@@ -1,109 +1,13 @@
-import { siteConfig } from "./site";
+import { content as globalContent } from "@/config/content";
 
 export const content = {
-  header: {
-    title: siteConfig.name,
-    search: {
-      placeholder: "Find your next favorite game...",
-      ariaLabel: "Search games",
-      buttonAriaLabel: "Search",
-    },
-    navigation: {
-      links: [
-        { text: "Start Play", href: "#game-section" },
-        { text: "Hot Games", href: "#other-games" },
-        { text: "Features", href: "#features" },
-        { text: "What Is", href: "#what-is" },
-        { text: "How to Play", href: "#how-to-play" },
-        { text: "FAQ", href: "#faq" },
-      ]
-    }
-  },
-  footer: {
-    about: {
-      title: "About",
-      description: `Play ${siteConfig.name} - a free Roblox farm simulation game right in your browser. Catch and raise animals with unique mutations. No downloads required.`,
-    },
-    quickLinks: {
-      title: "Quick Links",
-      links: [
-        { text: "Telegram", href: "https://t.me/s/free_unblocked_games" },
-        { text: "CAL", href: "https://cal.com/vincent-ai" },
-        { text: "Patreon", href: "https://www.patreon.com/posts/play-free-crazy-130738673" },
-        { text: "Linktr", href: "https://linktr.ee/vincent20250520" },
-        { text: "Creem", href: "https://www.creem.io/bip/vincent-ai" },
-        { text: "GetAllMyLinks", href: "https://getallmylinks.com/vincent" },
-        { text: "AllMyLinks", href: "https://allmylinks.com/vincent04065" },
-        { text: "Pinterest | Crazy Cattle 3D", href: "https://www.pinterest.com/pin/581245895696208484/" },
-        { text: "Pinterest | Doodle Baseball", href: "https://www.pinterest.com/pin/581245895696901681/" },
-        { text: "Github | Crazy Cattle 3D", href: "https://github.com/WeiWenxing/crazycattle3d/blob/main/README_EN.md" },
-      ]
-    },
-    games: {  // 添加 games section
-      title: "Games",
-      links: [
-        { text: "Raise Animals", href: "/raise-animals" },
-        { text: "Crazy Cattle 3D", href: "/crazy-cattle-3d" },
-        { text: "Crazy Cow 3D", href: "/crazy-cow-3d" },
-        { text: "Crazy Chicken 3D", href: "/crazy-chicken-3d" },
-        { text: "Cheese Chompers 3D", href: "/cheese-chompers-3d" },
-        { text: "Italian Brainrot Clicker", href: "/brainrot-clicker" },
-        { text: "Basketball Bros Unblocked", href: "/basketball-bros-unblocked" },
-        { text: "Pokemon Gamma Emerald", href: "/pokemon-gamma-emerald" },
-        { text: "Sprunki Incredibox", href: "/sprunki-incredibox" },
-        { text: "Futbol Libre", href: "/futbol-libre" },
-        { text: "Wrangle Ranch", href: "/wrangle-ranch" },
-        { text: "Steal Brainrot Online", href: "/steal-brainrot-online" },
-        { text: "Drift King NTL", href: "/drift-king-ntl" },
-        { text: "Shell Shockers", href: "/shell-shockers" },
-        { text: "Curve Rush", href: "/curve-rush" },
-      ]
-    },
-    social: {
-      title: "Share",
-      links: [
-        {
-          icon: "Facebook",
-          href: `https://www.facebook.com/sharer.php?t=${encodeURIComponent(siteConfig.name)}&u=${encodeURIComponent(siteConfig.url)}`
-        },
-        {
-          icon: "Twitter",
-          href: `https://twitter.com/intent/tweet?text=${encodeURIComponent(siteConfig.name)}&url=${encodeURIComponent(siteConfig.url)}&hashtags=${siteConfig.social.twitter},Games`
-        }
-      ]
-    },
-    legal: {
-      title: "Legal",
-      links: [
-        { text: "About Us", href: "/about" },
-        { text: "Contact Us", href: "/contact" },
-        { text: "Privacy Policy", href: "/privacy-policy" },
-        { text: "Terms of Service", href: "/terms-of-service" }
-      ]
-    },
-    copyright: {
-      text: "© {year} Raise Animals. All rights reserved.",
-      subText: "All games on this platform are free to play and do not require downloads."
-    }
-  },
-  rating: {
-    title: "Rate Raise Animals",
-    votes: "votes",
-    initialRating: 5.0,
-    initialVotes: 1
-  },
+  ...globalContent,
   gameSection: {
     title: "Raise Animals",
     game: {
       url: 'https://taproad.io/raise-animals.embed',
       title: "raiseanimals",
       externalUrl: 'https://taproad.io/raise-animals.embed'
-    }
-  },
-  otherGames: {
-    title: "Hot Games",
-    cardLabels: {
-      playButton: "Play Now",
     }
   },
   howToPlay: {
@@ -196,5 +100,3 @@ export const content = {
     ]
   }
 } as const;
-
-

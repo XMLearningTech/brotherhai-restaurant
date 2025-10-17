@@ -42,6 +42,26 @@ const nextConfig = {
         source: '/futbol-libre.embed',
         destination: '/game/futbol-libre/index.html',
       },
+      {
+        source: '/wrangle-ranch.embed',
+        destination: '/game/wrangle-ranch/index.html',
+      },
+      {
+        source: '/steal-brainrot-online.embed',
+        destination: '/game/steal-brainrot-online/index.html',
+      },
+      {
+        source: '/drift-king-ntl.embed',
+        destination: '/game/drift-king-ntl/index.html',
+      },
+      {
+        source: '/shell-shockers.embed',
+        destination: '/game/shell-shockers/index.html',
+      },
+      {
+        source: '/curve-rush.embed',
+        destination: '/game/curve-rush/index.html',
+      },
     ]
   }
 };
