@@ -1,5 +1,3 @@
-'use client';
-
 import { Header } from "@/components/layout/Header";
 import { GameSection } from "@/components/game-section/GameSection";
 import { Features } from "@/components/features/Features";

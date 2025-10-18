@@ -41,6 +41,36 @@ Crazy Cattle 3D 是一款基于物理引擎的 3D 动作游戏，可直接在浏
 - **SEO**: next-sitemap 4.2.3
 - **表单**: React Hook Form + Zod
 - **图标**: Lucide React
+- **渲染策略**: 静态生成 (SSG) + React Server Components
+
+## 架构特点
+
+### ⚡ 渲染优化
+
+本项目采用**混合渲染架构**，在保证交互性的同时最大化SEO和性能：
+
+- **服务器组件（Server Components）**：页面模板、内容展示组件
+  - `GamePageTemplate`: 游戏页面模板（服务器端渲染）
+  - `HomeTemplate`: 首页模板包装器（服务器端渲染）
+  - `Features`, `WhatIs`, `HowToPlay`, `FAQ`: 静态内容组件
+
+- **客户端组件（Client Components）**：交互功能组件
+  - `HomeContent`: 首页交互逻辑（搜索、状态管理）
+  - `Header`: 导航和搜索功能
+  - `GameSection`: 游戏全屏控制
+  - `Rating`: 评分交互
+
+- **静态生成（SSG）**：所有23个页面均在构建时生成静态HTML
+  - 首屏HTML完整，无需等待JavaScript加载
+  - 爬虫可直接索引所有内容
+  - 极速的首次内容绘制（FCP）
+
+### 🎯 SEO 优势
+
+1. **完整的首屏HTML** - 所有内容在构建时渲染，爬虫可见
+2. **结构化数据** - 每个页面包含 Schema.org 标记
+3. **优化的metadata** - 完整的 OpenGraph 和 Twitter Card
+4. **AI爬虫友好** - 专用的 llms.txt 文件
 
 ## 项目结构
 
@@ -65,8 +95,10 @@ Crazy Cattle 3D 是一款基于物理引擎的 3D 动作游戏，可直接在浏
 ├── components/             # React 组件库
 │   ├── game-section/       # 游戏展示组件
 │   ├── layout/             # 布局组件 (Header, Footer)
-│   ├── templates/          # 页面模板 (GamePageTemplate)
+│   ├── templates/          # 页面模板 (GamePageTemplate - Server Component)
 │   ├── home/               # 首页组件
+│   │   ├── HomeTemplate.tsx    # 首页服务器组件包装器
+│   │   └── HomeContent.tsx     # 首页客户端交互组件
 │   ├── features/           # 游戏特性组件
 │   ├── what-is/            # 游戏介绍组件
 │   ├── how-to-play/        # 玩法说明组件
