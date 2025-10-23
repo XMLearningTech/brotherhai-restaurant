@@ -103,7 +103,7 @@ const PrivacyPolicy = () => {
                 If you have any questions about this Privacy Policy, please contact us:
               </p>
               <p className="mt-2">
-                By email: support@crazy-cattle.net
+                By email: support@raiseanimals.org
               </p>
             </section>
           </div>

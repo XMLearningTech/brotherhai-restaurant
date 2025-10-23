@@ -27,6 +27,7 @@ export const content = {
     quickLinks: {
       title: "Quick Links",
       links: [
+        { text: "Blog", href: "/raise-animals/blog" },
         { text: "Telegram", href: "https://t.me/s/free_unblocked_games" },
         { text: "CAL", href: "https://cal.com/vincent-ai" },
         { text: "Patreon", href: "https://www.patreon.com/posts/play-free-crazy-130738673" },

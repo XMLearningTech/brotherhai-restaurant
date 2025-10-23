@@ -37,7 +37,7 @@ export const content = {
         answer: "You can play Raise Animals online free on Roblox platform or through browser-based versions on various gaming websites like Taproad.io. Our site offers an unblocked version that works directly in your browser on Windows, Mac, Linux, and mobile devices without any downloads required."
       },
       {
-        value: "play-on-mobile",
+        value: "play-on-mobile",qqqq
         question: "Can I play Raise Animals online on my mobile device?",
         answer: "Yes! Raise Animals is fully optimized for mobile play. You can play this free online game on phones and tablets using touch controls. The joystick replaces WASD movement, and tap controls make it easy to place animals and feed them on the go."
       },

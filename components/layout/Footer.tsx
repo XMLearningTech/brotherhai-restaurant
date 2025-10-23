@@ -76,22 +76,44 @@ export function Footer() {
                 {content.footer.quickLinks.title}
               </h3>
               <ul className={theme.footer.spacing.linkList}>
-                {content.footer.quickLinks.links.map((link) => (
-                  <li key={link.href}>
-                    <a
-                      href={link.href}
-                      className={cn(
-                        "text-sm",
-                        theme.footer.colors.mutedText,
-                        theme.footer.colors.hover
-                      )}
-                      target="_blank"
-                      rel="noopener"  // 只使用 noopener 以传递权重
-                    >
-                      {link.text}
-                    </a>
-                  </li>
-                ))}
+                {content.footer.quickLinks.links.map((link) => {
+                  // Check if link is internal (starts with /)
+                  const isInternal = link.href.startsWith('/');
+                  
+                  if (isInternal) {
+                    return (
+                      <li key={link.href}>
+                        <Link
+                          href={link.href}
+                          className={cn(
+                            "text-sm",
+                            theme.footer.colors.mutedText,
+                            theme.footer.colors.hover
+                          )}
+                        >
+                          {link.text}
+                        </Link>
+                      </li>
+                    );
+                  }
+                  
+                  return (
+                    <li key={link.href}>
+                      <a
+                        href={link.href}
+                        className={cn(
+                          "text-sm",
+                          theme.footer.colors.mutedText,
+                          theme.footer.colors.hover
+                        )}
+                        target="_blank"
+                        rel="noopener"  // 只使用 noopener 以传递权重
+                      >
+                        {link.text}
+                      </a>
+                    </li>
+                  );
+                })}
               </ul>
             </div>
           )}
