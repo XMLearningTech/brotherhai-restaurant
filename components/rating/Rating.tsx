@@ -102,13 +102,13 @@ export function Rating() {
       />
 
       <div className="container mx-auto">
-        <div className="bg-[#fff2cb] rounded-lg p-6 mb-6">
-          <h2 className="text-3xl font-bold text-center">{content.rating.title}</h2>
+        <div className="bg-gray-900/50 border border-gray-800 rounded-lg p-6 mb-6">
+          <h2 className="text-3xl font-bold text-center text-gray-100">{content.rating.title}</h2>
           {/* 添加重置按钮 */}
           <div className="text-center mt-2">
             <button
               onClick={handleReset}
-              className="text-sm text-gray-500 hover:text-gray-700"
+              className="text-sm text-gray-500 hover:text-gray-400"
               style={{ display: process.env.NODE_ENV === 'development' ? 'block' : 'none' }}
             >
               Reset
@@ -124,10 +124,10 @@ export function Rating() {
                 disabled={hasVoted}
                 className={`w-12 h-12 flex items-center justify-center rounded-full transition-all ${
                   (hasVoted && star <= userRating) || (!hasVoted && star <= userRating)
-                    ? 'bg-yellow-400 text-white'
+                    ? 'bg-red-600 text-white'
                     : hasVoted
-                    ? 'bg-gray-200 cursor-not-allowed'
-                    : 'bg-gray-200 hover:bg-yellow-200 cursor-pointer'
+                    ? 'bg-gray-800 cursor-not-allowed'
+                    : 'bg-gray-800 hover:bg-red-900/30 cursor-pointer'
                 }`}
                 aria-label={`Rate ${star} stars`}
               >
@@ -147,8 +147,8 @@ export function Rating() {
             ))}
           </div>
           <div className="text-center">
-            <div className="text-4xl font-bold text-yellow-500">{rating}</div>
-            <div className="text-gray-500">
+            <div className="text-4xl font-bold text-red-500">{rating}</div>
+            <div className="text-gray-400">
               <span className="font-semibold">{votes.toLocaleString()}</span> {content.rating.votes}
             </div>
           </div>

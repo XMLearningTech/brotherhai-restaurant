@@ -49,28 +49,17 @@ export function Header({ searchQuery = "", onSearchChange = () => {}, onSearch =
   return (
     <header className={headerClassName}>
       <div className={containerClassName}>
-        {/* 左侧 Logo 和标题 */}
+        {/* 左侧标题 */}
         <div className={theme.header.layout.logo.wrapper}>
-          <Link href="/">
-            <img
-              src={layout.header.logo.src}
-              alt={content.header.title}
-              className={cn(
-                layout.header.logo.size,
-                theme.header.layout.logo.image,
-                "cursor-pointer hover:opacity-90 transition-opacity"
-              )}
-            />
-          </Link>
           <Link href="/" className="no-underline">
-            <h1 className={cn(
+            <div className={cn(
               layout.header.logoSize,
               "font-bold",
               theme.header.colors.text,
               theme.header.colors.hover // Apply hover effect to text as well
             )}>
               {formatPathToTitle()}
-            </h1>
+            </div>
           </Link>
         </div>
 

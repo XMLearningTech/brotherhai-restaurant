@@ -26,8 +26,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Raise Animals - Free Online Roblox Farm Game',
-    description: 'Play free online farm simulation game - Catch and raise animals with unique mutations',
+    title: "Brother Hai's Pho Restaurant - Free Online Cooking Game",
+    description: 'Play free online restaurant management game - Cook Vietnamese pho and serve customers',
     images: [siteConfig.images.og],  // 添加 Twitter 卡片图片
   },
   robots: {
@@ -40,6 +40,9 @@ export const metadata: Metadata = {
       'max-image-preview': 'large',
       'max-snippet': -1,
     },
+  },
+  alternates: {
+    canonical: siteConfig.url,
   },
 };
 

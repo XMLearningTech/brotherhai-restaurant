@@ -42,42 +42,51 @@ export function GameSection({ content = defaultContent }: GameSectionProps) {
         </h2>
       )}
 
-      {/* 游戏容器 - 移除圆角 */}
+      {/* 大型游戏展示区域 - 统一暗色风格 */}
       <div
         ref={containerRef}
         className={cn(
-          "w-full max-w-4xl mx-auto overflow-hidden shadow-xl relative",
-          theme.gameSection.colors.container,
-          "mb-0 rounded-none" // 移除底部边距，移除圆角
+          "w-full max-w-6xl mx-auto overflow-hidden relative",
+          "bg-gradient-to-b from-gray-950 via-gray-900 to-gray-950 rounded-lg",
+          "min-h-[600px] flex flex-col items-center justify-center p-8 md:p-12",
+          "border border-red-900/20 mb-8"
         )}
       >
-        <iframe
-          src={content.gameSection.game.url}
-          className="w-full h-full aspect-video border-0"
-          allow="fullscreen"
-          title={content.gameSection.game.title}
-        />
-      </div>
+        {/* 游戏视频嵌入 */}
+        <div className="relative w-full max-w-4xl mb-8 rounded-lg overflow-hidden shadow-2xl">
+          <div className="aspect-video">
+            <iframe 
+              width="100%" 
+              height="100%" 
+              src="https://www.youtube.com/embed/0bz6TyaQhSE" 
+              title="Brother Hai's Pho Restaurant - Official Trailer" 
+              frameBorder="0" 
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+              referrerPolicy="strict-origin-when-cross-origin" 
+              allowFullScreen
+              className="w-full h-full"
+            />
+          </div>
+        </div>
 
-      {/* 按钮行 - 在游戏区域下方，带暗色背景，移除上部圆角 */}
-      <div className="flex justify-end items-center w-full max-w-4xl mx-auto mb-16 bg-gray-700/70 dark:bg-gray-800/70 text-white rounded-none p-2 shadow-md">
-        {/* 这里可以添加其他按钮 */}
+        {/* 游戏标题 */}
+        <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold text-center mb-6 text-red-500 drop-shadow-lg">
+          Brother Hai's Pho Restaurant
+        </h1>
 
-        {/* 全屏按钮 */}
+        {/* 下载/开始游戏按钮 */}
         <Button
-          onClick={toggleFullscreen}
-          size="icon"
-          variant="ghost"
-          className="hover:bg-white/20 text-white rounded-full p-1.5 transition-colors"
-          aria-label={isFullscreen ? "Exit fullscreen" : "Enter fullscreen"}
+          onClick={() => window.open(content.gameSection.game.externalUrl, '_blank')}
+          size="lg"
+          className="bg-gradient-to-r from-red-600 to-red-700 hover:from-red-700 hover:to-red-800 text-white text-lg md:text-xl px-10 py-5 md:px-12 md:py-6 rounded-full shadow-xl mb-4 transition-all duration-300 transform hover:scale-105"
         >
-          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-            <path d="M9 9L4 4m0 0l5 0M4 4l0 5" />
-            <path d="M15 9l5-5m0 0h-5m5 0v5" />
-            <path d="M9 15l-5 5m0 0h5m-5 0v-5" />
-            <path d="M15 15l5 5m0 0v-5m0 5h-5" />
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="mr-3">
+            <polygon points="5 3 19 12 5 21 5 3"></polygon>
           </svg>
+          Download Game
         </Button>
+
+        <p className="text-gray-400 text-sm">Play on itch.io - Free to play</p>
       </div>
     </section>
   );

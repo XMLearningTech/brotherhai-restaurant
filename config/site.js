@@ -1,17 +1,17 @@
 export const siteConfig = {
-  name: "Raise Animals",
-  description: "Play Raise Animals online free! Catch and raise animals, build your dream farm with unique mutations and offline progress. Roblox simulation game - no download required!",
-  domain: "raiseanimals.org",
-  url: "https://raiseanimals.org",
-  email: "support@raiseanimals.org",
-  author: "Raise Animals",
+  name: "Brother Hai's Pho Restaurant",
+  description: "Play Brother Hai's Pho Restaurant online free! Run your own Vietnamese pho restaurant, cook delicious dishes, and serve customers. Restaurant management game - no download required!",
+  domain: "brotherhai.restaurant",
+  url: "https://brotherhai.restaurant",
+  email: "support@brotherhai.restaurant",
+  author: "Brother Hai's Pho Restaurant",
   social: {
-    twitter: "RaiseAnimalsGame",
-    facebook: "RaiseAnimalsGame",
+    twitter: "BrotherHaiPho",
+    facebook: "BrotherHaiPho",
   },
   metadata: {
-    keywords: ["raise animals", "farm game", "roblox game", "animal simulation", "online game", "free game", "catch animals", "farm building"],
-    themeColor: "#ffffff",
+    keywords: ["brother hai pho restaurant", "cooking game", "restaurant management", "pho game", "online game", "free game", "vietnamese food", "cooking simulation"],
+    themeColor: "#dc2626",
     manifestPath: "/assets/img/site.webmanifest",
   },
   images: {
@@ -22,6 +22,6 @@ export const siteConfig = {
       apple: "/assets/img/apple-touch-icon.png",
       // safari: "/assets/img/safari-pinned-tab.svg",
     },
-    og: "/assets/raise-animals/raise-animals.png",
+    og: "/assets/brother-hais-pho-restaurant/brother-hais-pho-restaurant.png",
   },
 };

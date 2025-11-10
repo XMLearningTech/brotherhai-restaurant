@@ -1,6 +1,15 @@
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { siteConfig } from "@/config/site";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: `About ${siteConfig.name} | ${siteConfig.domain}`,
+  description: `Learn about ${siteConfig.name} and our mission to provide fun, accessible browser-based gaming experiences for everyone.`,
+  alternates: {
+    canonical: `${siteConfig.url}/about`,
+  },
+};
 
 const AboutPage = () => {
   return (
@@ -15,31 +24,31 @@ const AboutPage = () => {
             <section>
               <h2 className="text-2xl font-semibold mb-3">Our Mission</h2>
               <p>
-                At {siteConfig.name}, our mission is to provide fun, accessible, and engaging browser-based gaming experiences for everyone. We believe in the power of games to bring joy, challenge minds, and connect people. We are passionate about creating innovative and entertaining games that can be played instantly, without downloads or barriers.
+                At {siteConfig.name}, our mission is to bring the authentic experience of Vietnamese pho restaurant management to players worldwide. We believe in the power of games to educate, entertain, and inspire. Our goal is to create an immersive cooking and restaurant simulation that celebrates Vietnamese culinary culture while providing engaging gameplay that can be enjoyed instantly in your browser, without downloads or barriers.
               </p>
             </section>
 
             <section>
               <h2 className="text-2xl font-semibold mb-3">Who We Are</h2>
               <p>
-                We are a small, dedicated team of game developers, designers, and enthusiasts who love creating unique and memorable gaming moments. Our journey started with a simple idea: to make games that we ourselves would love to play and share with the world. {siteConfig.name} is the culmination of our passion and hard work.
+                We are a passionate team of game developers and Vietnamese food enthusiasts dedicated to creating authentic culinary gaming experiences. Our journey began with a love for Vietnamese pho and a vision to share this wonderful cuisine with the world through interactive gameplay. {siteConfig.name} represents our commitment to quality, authenticity, and fun.
               </p>
               <p className="mt-4">
-                While we started with the chaotic fun of physics-based games like Crazy Cattle 3D, we are always exploring new genres and ideas to expand our collection and offer a diverse range of entertainment.
+                Our game combines realistic restaurant management mechanics with the art of traditional Vietnamese pho preparation, offering players a unique opportunity to learn about this beloved cuisine while enjoying challenging and rewarding gameplay.
               </p>
             </section>
 
             <section>
-              <h2 className="text-2xl font-semibold mb-3">Our Games</h2>
+              <h2 className="text-2xl font-semibold mb-3">Our Game</h2>
               <p>
-                From the explosive sheep battles in Crazy Cattle 3D to the hilarious antics of Crazy Cow 3D and the cheesy knockouts in Cheese Chompers 3D, we strive to deliver quality and fun. Each game is crafted with care, focusing on unique gameplay mechanics and endless replayability. We are constantly working on new titles and updates to existing games based on player feedback and our creative vision.
+                Brother Hai's Pho Restaurant is more than just a cooking game - it's a celebration of Vietnamese culinary traditions. From taking customer orders to preparing authentic pho with fresh ingredients and aromatic broths, every aspect of the game has been designed to provide an immersive restaurant management experience. We focus on realistic cooking mechanics, strategic time management, and progressive gameplay that keeps you coming back for more.
               </p>
             </section>
             
             <section>
               <h2 className="text-2xl font-semibold mb-3">Our Commitment</h2>
               <p>
-                We are committed to providing a safe and enjoyable environment for our players. All our games are free to play directly in your browser, with no hidden costs or intrusive requirements. We value your feedback and encourage you to reach out to us with any suggestions or comments.
+                We are committed to providing an authentic, safe, and enjoyable gaming experience for all our players. Brother Hai's Pho Restaurant is completely free to play directly in your browser, with no hidden costs, no downloads required, and no intrusive advertisements. We value your feedback and actively incorporate player suggestions to continuously improve the game and add new features.
               </p>
             </section>
 

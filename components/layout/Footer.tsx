@@ -32,40 +32,13 @@ export function Footer() {
         <div className={gridClassName}>
           {/* About Section */}
           {layout.footer.sections.about && (
-            <div>
-              <h3 className={cn("font-semibold", theme.footer.spacing.sectionTitle)}>
+            <div className="max-w-sm">
+              <h3 className={cn("font-semibold text-gray-100", theme.footer.spacing.sectionTitle)}>
                 {content.footer.about.title}
               </h3>
-              <p className={theme.footer.colors.mutedText}>
+              <p className={cn("text-sm leading-relaxed", theme.footer.colors.mutedText)}>
                 {content.footer.about.description}
               </p>
-            </div>
-          )}
-
-          {/* Games Section */}
-          {layout.footer.sections.games && (
-            <div>
-              <h3 className={cn("font-bold", theme.footer.spacing.sectionTitle)}>
-                {content.footer.games.title}
-              </h3>
-              <ul className={theme.footer.spacing.linkList}>
-                {content.footer.games.links.map((link) => (
-                  <li key={link.href}>
-                    <a
-                      href={link.href}
-                      className={cn(
-                        "text-sm",
-                        theme.footer.colors.mutedText,
-                        theme.footer.colors.hover
-                      )}
-                      target="_blank"
-                      rel="noopener"  // 只使用 noopener 以传递权重
-                    >
-                      {link.text}
-                    </a>
-                  </li>
-                ))}
-              </ul>
             </div>
           )}
 

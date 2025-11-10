@@ -1,5 +1,15 @@
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
+import { siteConfig } from "@/config/site";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: `Privacy Policy | ${siteConfig.name} | ${siteConfig.domain}`,
+  description: `Privacy policy for ${siteConfig.name}. Learn how we handle your personal data and protect your privacy.`,
+  alternates: {
+    canonical: `${siteConfig.url}/privacy-policy`,
+  },
+};
 
 const PrivacyPolicy = () => {
   return (
@@ -14,7 +24,7 @@ const PrivacyPolicy = () => {
             <section>
               <h2 className="text-2xl font-semibold mb-3">1. Introduction</h2>
               <p>
-                Welcome to our website. We respect your privacy and are committed to protecting your personal data. This privacy policy will inform you about how we handle your personal data when you visit our website and tell you about your privacy rights.
+                Welcome to {siteConfig.name}. We respect your privacy and are committed to protecting your personal data. This privacy policy will inform you about how we handle your personal data when you visit our website and tell you about your privacy rights when playing our restaurant management game.
               </p>
             </section>
 
@@ -103,7 +113,7 @@ const PrivacyPolicy = () => {
                 If you have any questions about this Privacy Policy, please contact us:
               </p>
               <p className="mt-2">
-                By email: support@raiseanimals.org
+                By email: {siteConfig.email}
               </p>
             </section>
           </div>

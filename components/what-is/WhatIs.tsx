@@ -16,41 +16,31 @@ interface WhatIsProps {
 }
 
 export function WhatIs({ content = defaultContent }: WhatIsProps) {
+  const paragraphs = content.whatIs.description
+    .split('\n\n')
+    .filter(p => !p.includes('<!-- VIDEO_EMBED'));
+
   return (
     <section
       id="what-is"
       className={cn(
-        theme.whatIs.layout.section,
+        "mb-24",
         theme.layout.section.scrollMargin
       )}
     >
-      <div className={theme.whatIs.layout.container}>
-        <div className={cn(theme.whatIs.colors.card, theme.whatIs.layout.card, theme.whatIs.spacing.card)}>
-          <div className={layout.whatIs.grid.columns}>
-            <div className={theme.whatIs.layout.logoWrapper}>
-              <img
-                src={content.whatIs.logo.src}
-                alt={content.whatIs.logo.alt}
-                className={cn(
-                  layout.whatIs.logo.size.width,
-                  layout.whatIs.logo.size.height,
-                  theme.whatIs.layout.logo
-                )}
-              />
-            </div>
-            <div className={layout.whatIs.content.span}>
-              <h2 className={cn(theme.whatIs.typography.title, theme.whatIs.spacing.title)}>
-                {content.whatIs.title}
-              </h2>
-              <p className={cn(
-                theme.whatIs.typography.description,
-                theme.whatIs.colors.description,
-                theme.whatIs.spacing.description
-              )}>
-                {content.whatIs.description}
-              </p>
-            </div>
+      <div className="container mx-auto px-4">
+        <div className="bg-gray-900/50 border border-gray-800 rounded-lg p-8 md:p-12">
+          <h2 className="text-3xl font-bold text-center mb-8 text-gray-100">
+            {content.whatIs.title}
+          </h2>
+          
+          <div className="max-w-4xl mx-auto space-y-4 text-gray-300 mb-8">
+            {paragraphs.map((paragraph, index) => (
+              <p key={index}>{paragraph}</p>
+            ))}
           </div>
+
+          {/* 视频嵌入 - 已在主页展示，这里可以不重复 */}
         </div>
       </div>
     </section>

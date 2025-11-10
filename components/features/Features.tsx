@@ -23,14 +23,14 @@ export function Features({ content = defaultContent }: FeaturesProps) {
         theme.layout.section.scrollMargin  // 添加统一的滚动偏移量
       )}
     >
-      <h2 className="text-3xl font-bold mb-6 text-center">{content.features.title}</h2>
+      <h2 className="text-3xl font-bold mb-6 text-center text-gray-100">{content.features.title}</h2>
       <div className="grid md:grid-cols-2 gap-8">
         {content.features.items.map((feature, index) => (
-          <div key={index} className="p-6 bg-gray-50 rounded-lg">
-            <h3 className={cn("text-xl font-bold mb-4", colors[index])}>
+          <div key={index} className="p-6 bg-gray-900/50 border border-gray-800 rounded-lg hover:border-red-900/30 transition-all duration-300">
+            <h3 className={cn("text-xl font-bold mb-4", "text-red-500")}>
               {feature.title}
             </h3>
-            <p className="text-gray-700 text-left">{feature.description}</p>
+            <p className="text-gray-300 text-left">{feature.description}</p>
           </div>
         ))}
       </div>

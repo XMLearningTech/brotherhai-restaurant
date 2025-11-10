@@ -2,6 +2,15 @@ import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { siteConfig } from "@/config/site";
 import Link from "next/link"; // Import Link for internal navigation
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: `Contact Us | ${siteConfig.name} | ${siteConfig.domain}`,
+  description: `Get in touch with ${siteConfig.name}. We're here to help with any questions or feedback.`,
+  alternates: {
+    canonical: `${siteConfig.url}/contact`,
+  },
+};
 
 const ContactPage = () => {
   return (
@@ -26,7 +35,7 @@ const ContactPage = () => {
             <section>
               <h2 className="text-2xl font-semibold mb-4">About {siteConfig.name}</h2>
               <p className="leading-relaxed">
-                {siteConfig.name} is dedicated to creating and sharing unique and engaging physics-based browser games. Our goal is to provide a fun and accessible gaming experience for everyone. We are passionate about building a community around our games and continuously improving based on player experiences.
+                {siteConfig.name} is dedicated to creating authentic and engaging Vietnamese restaurant management gaming experiences. Our goal is to provide a fun and accessible cooking simulation that celebrates Vietnamese culinary traditions while offering challenging and rewarding gameplay. We are passionate about building a community of food lovers and gaming enthusiasts, and we continuously improve our game based on player feedback and suggestions.
               </p>
             </section>
 
