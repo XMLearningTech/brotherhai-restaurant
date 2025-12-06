@@ -256,6 +256,16 @@ npm run clean-sitemap
 - 🎨 **Creem**: [Creem 创作平台](https://www.creem.io/bip/vincent-ai)
 - 💻 **CrazyCattle3d Github**: [项目英文文档](https://github.com/WeiWenxing/crazycattle3d/blob/main/README_EN.md)
 
+## 广告配置
+
+### Ads.txt
+
+项目已包含 `public/ads.txt` 文件，这是 Google AdSense 的授权文件。如果更改了 Publisher ID，请务必更新此文件中的 ID。
+
+### 环境变量
+
+在 `.env.local` 和 Vercel 环境变量中配置 `NEXT_PUBLIC_GOOGLE_ADSENSE_ID`。
+
 ## AI 爬虫优化
 
 本项目针对 AI 爬虫进行了特殊优化：
