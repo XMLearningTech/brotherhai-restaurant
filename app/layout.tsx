@@ -83,9 +83,9 @@ export default function RootLayout({
             </Script>
           </>
         )}
+        {googleAdsenseId && <GoogleAdsense pId={googleAdsenseId} />}
       </head>
       <body className={inter.className}>
-        {googleAdsenseId && <GoogleAdsense pId={googleAdsenseId} />}
         {children}
       </body>
     </html>
