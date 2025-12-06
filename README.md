@@ -158,6 +158,11 @@ Crazy Cattle 3D 是一款基于物理引擎的 3D 动作游戏，可直接在浏
 # 获取方式: https://analytics.google.com/ → 管理 → 数据流 → 衡量ID
 NEXT_PUBLIC_GA_ID=G-XXXXXXXXXX
 
+# Google AdSense Configuration
+# 请替换为您自己的 Publisher ID
+# 获取方式: Google AdSense 后台
+NEXT_PUBLIC_GOOGLE_ADSENSE_ID=ca-pub-8982188729946085
+
 # 其他可选配置
 # NEXT_PUBLIC_SITE_URL=https://your-domain.com
 ```
@@ -282,6 +287,11 @@ npm run clean-sitemap
 Name: NEXT_PUBLIC_GA_ID
 Value: G-XXXXXXXXXX
 Environment: Production, Preview, Development
+
+Name: NEXT_PUBLIC_GOOGLE_ADSENSE_ID
+Value: ca-pub-8982188729946085
+Environment: Production (建议只在生产环境开启)
+
 ```
 
 **或者使用 Vercel CLI：**

@@ -3,6 +3,7 @@ import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import { siteConfig } from "@/config/site";
 import Script from 'next/script';
+import GoogleAdsense from "@/components/ads/GoogleAdsense";
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -52,6 +53,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   const gaId = process.env.NEXT_PUBLIC_GA_ID;
+  const googleAdsenseId = process.env.NEXT_PUBLIC_GOOGLE_ADSENSE_ID;
 
   return (
     <html lang="en">
@@ -82,7 +84,10 @@ export default function RootLayout({
           </>
         )}
       </head>
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        {googleAdsenseId && <GoogleAdsense pId={googleAdsenseId} />}
+        {children}
+      </body>
     </html>
   );
 }
